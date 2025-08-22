@@ -42,12 +42,12 @@ both dev server and build), but never actually loaded in the browser.
    > ng build
 
    Initial chunk files | Names         | Raw size | Estimated transfer size
-   main-YOCO3XHU.js    | main          | 91.03 kB |                27.28 kB
+   main.js             | main          | 91.03 kB |                27.28 kB
 
                        | Initial total | 91.03 kB |                27.28 kB
 
    Lazy chunk files    | Names         | Raw size | Estimated transfer size
-   main-M4DN6OYF.css   | -             | 56 bytes |                56 bytes
+   main.css            | -             | 56 bytes |                56 bytes
    ```
 
    The lazy chunk is created, but never referenced in the `index.html` or any
@@ -56,7 +56,7 @@ both dev server and build), but never actually loaded in the browser.
    You can serve the build in the browser to verify:
 
    ```sh
-   npx serve dist/reproduction/browser -p 4201
+   npx serve dist/reproduction/browser -p 4200
    ```
 
 See node_modules/external-library/ for the dummy external library with a CSS
